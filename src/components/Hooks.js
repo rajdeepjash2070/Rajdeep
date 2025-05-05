@@ -9,6 +9,7 @@ import React, {
     useLayoutEffect,
     createContext,
   } from "react";
+import Navigation from "./Navigation";
   
   // 1. Context for Dark Mode
   const ThemeContext = createContext();
@@ -90,7 +91,9 @@ import React, {
     }, [moodLog]);
   
     return (
+      
       <ThemeContext.Provider value={themeValue}>
+        <Navigation/>
         <div style={{ padding: 20, backgroundColor: theme === "dark" ? "#0C0630" : "#f5f5f5", color: theme === "dark" ? "#fff" : "#000" }}>
           <h2>Mood & Task Dashboard</h2>
   

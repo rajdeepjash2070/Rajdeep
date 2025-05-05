@@ -1,14 +1,81 @@
-.col{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  
-    height: 270px;
-    margin: 20px;
-    margin-bottom: 0px;
+.dash{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin-top: 20px;
+    grid-gap: 40px;
+   
+}
+
+.menu{
+    margin-top: 20px;
+    padding-top: 40px;
+    color: white;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.menu li{
+    padding-top: 15px;
+    
+
+}
+
+.item{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 20px;
+
 }
 
 
-.ch{
-    height: 270px;
-    width: 300px;
-    margin-bottom: -40px;
+
+.item1{
+    background-color: rgb(27, 0, 101);
+}
+
+
+.item2{
+    background-color: rgb(255, 0, 106);
+    
+}
+
+.item2:hover{
+    transition: 0.4s;
+     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    
+}
+
+.item3:hover{
+    transition: 0.4s;
+     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    
+}
+
+.item4:hover{
+    transition: 0.4s;
+     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    
+}
+.item3{
+    background-color: rgb(123, 0, 255);
+}
+
+.item4{
+    background-color: rgb(111, 255, 63);
+    margin-right: 30px;
+}
+
+
+
+.menu{
+    
+    grid-row: 1/span 2;
+}
+
+.menu2{
+    
+    grid-column: 2/-1;
 }

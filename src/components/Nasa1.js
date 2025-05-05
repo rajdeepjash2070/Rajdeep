@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
 
 const Nasa1 = () => {
   const [users, setUsers] = useState([]);
@@ -29,6 +30,7 @@ const Nasa1 = () => {
 
   return (
     <div>
+      <Navigation/>
       <div>
       <h1>Astronomy Image of the day</h1>
       <ul>

@@ -17,7 +17,7 @@ function App() {
   
   return (
     <Router>
-      <Navigation/>
+      
 
       <Routes>
         <Route path="/test" element={<Test />} />

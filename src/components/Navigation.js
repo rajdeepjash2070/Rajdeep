@@ -26,6 +26,7 @@ const Navigation = () => {
           <li className="nav-item"><Link to="/nasa"  className="nav-link" onClick={closeMenu}>Nasa API</Link></li>
           <li className="nav-item"><Link to="/astor"  className="nav-link" onClick={closeMenu}>Aesteroid</Link></li>
           <li className="nav-item"><Link to="/hooks"  className="nav-link" onClick={closeMenu}>Hooks</Link></li>
+          <li className="nav-item"><Link to="/dashboard"  className="nav-link" onClick={closeMenu}>Dashboard</Link></li>
           <li className="nav-item"><Link to="/crudmysql" className="nav-link" onClick={closeMenu}>CRUD</Link></li>
         
         

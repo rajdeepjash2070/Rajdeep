@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Navigation from "./Navigation";
 
 const Nasaaestor= () => {
   const [asteroids, setAsteroids] = useState([]);
@@ -28,6 +29,7 @@ const Nasaaestor= () => {
 
   return (
     <div>
+      <Navigation/>
       <h2>Asteroids on 2015-09-07 to 2015-09-08</h2>
       <ul>
         {asteroids.map((asteroid, index) => (

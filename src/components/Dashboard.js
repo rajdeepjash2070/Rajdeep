@@ -1,6 +1,20 @@
 import React from 'react'
 import Chart from "react-apexcharts"
 import "./Dashboard.css"
+import {
+  FaHome,
+  FaInfoCircle,
+  FaEnvelope,
+  FaSignInAlt,
+  FaUserPlus,
+  FaCogs,
+  FaProjectDiagram,
+  FaGithub,
+  FaCode
+} from 'react-icons/fa';
+
+
+
 const Dashboard = () => {
   const series = [44, 55, 41, 17, 15];
 
@@ -76,41 +90,73 @@ const Dashboard = () => {
     }
   };
   return (
-    <div>
-      <div className="container">
-        <div className='row'>
-       <div className="barchart col">
-       <div>
-      <Chart className="ch" options={options4} series={series4} type="bar" />
-       </div>
+     <div className='all'>
+     
+        <div className='dash'>
+          <div className='menu item item1'>
+          <ul className="space-y-3 text-lg">
+      <li><FaHome className="inline mr-2" /> Home</li>
+      <li><FaInfoCircle className="inline mr-2" /> About</li>
+      <li><FaEnvelope className="inline mr-2" /> Contact</li>
+      <li><FaSignInAlt className="inline mr-2" /> Login</li>
+      <li><FaUserPlus className="inline mr-2" /> Register</li>
+      <li><FaCogs className="inline mr-2" /> Services</li>
+      <li><FaProjectDiagram className="inline mr-2" /> Projects</li>
+      <li><FaGithub className="inline mr-2" /> My Github</li>
+      <li><FaCode className="inline mr-2" /> Source Code</li>
+    </ul>
+
+
+          </div>
+        
+      <Chart className="item item2" options={options4} series={series4} type="bar" />
+ 
+      <Chart className="item item3" options={options} series={series} type="donut"/>
+   
+      <Chart className="item item4" options={options2} series={series2} type="line" />
+
+
+
+      <div className='menu2' style={{marginRight:"30px"}}>
+      <table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
+    </tr>
+  </tbody>
+</table>
       </div>
-      <div className='donutchart col'>
-      <div className="donut">
-      <Chart className="ch" options={options} series={series} type="donut"
       
-      />
-      </div>
-      </div>
+      
+   
       </div>
         
-
-
-      <div className='row'>
-      <div className='linechart col'>
-      <div>
-      <Chart className="ch" options={options2} series={series2} type="line" />
-    </div>
-      </div>
-
+      
         
-      <div className='areachart col'>
-      <div>
-      <Chart className="ch" options={options3} series={series3} type="area" />
-    </div>
-      </div>
-      </div>
-      </div>
-    </div>
+     </div> 
   )
 }
 
