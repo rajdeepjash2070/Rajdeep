@@ -9,8 +9,11 @@ import Nasaaestor from './components/Nasaaestor';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Hooks from './components/Hooks';
-import Crudmysql from './components/Crudmysql';
-import Navigation from './components/Navigation';
+import Crud from './components/Crud';
+import Addbook from './components/Addbook';
+import Updatebook from './components/Updatebook';
+
+
 
 
 function App() {
@@ -27,7 +30,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path="/hooks" element={<Hooks/>}/>
-        <Route path="/crudmysql" element={<Crudmysql/>}/>
+        <Route path='/crud' element={<Crud/>}/>
+        <Route path='/addbook' element={<Addbook/>}/>
+        <Route path='/updatebook/:id' element={<Updatebook/>}/>
       </Routes>
     </Router>
   );

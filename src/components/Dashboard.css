@@ -1,10 +1,17 @@
 .dash{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
-    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 100px;
     grid-gap: 40px;
+    grid-template-rows: 300px auto;
+    padding-right: 20px;
+    background-color: black;
    
+}
+.ic{
+  margin-right: 10px;
 }
 
 .menu{
@@ -25,26 +32,18 @@
 }
 
 .item{
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 20px;
-
+    background-color: #121832;
 }
 
-
-
-.item1{
-    background-color: rgb(27, 0, 101);
+.item:hover{
+  background-color: #133353;
 }
-
-
-.item2{
-    background-color: rgb(255, 0, 106);
-    
-}
-
 .item2:hover{
     transition: 0.4s;
      box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    
     
 }
 
@@ -59,23 +58,97 @@
      box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
     
 }
-.item3{
-    background-color: rgb(123, 0, 255);
-}
-
-.item4{
-    background-color: rgb(111, 255, 63);
-    margin-right: 30px;
-}
 
 
 
-.menu{
+.item5{
     
-    grid-row: 1/span 2;
+    grid-column: 1/span 2;
 }
 
-.menu2{
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+ 
+    color: white;
+    width: 250px;
+    padding-top: 60px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+    background-color: #34495e;
     
-    grid-column: 2/-1;
-}
+  }
+  
+  .sidebar.closed {
+    width: 60px;
+    
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    display: block;
+  }
+  
+  .menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  
+  .menu li:hover {
+    background-color: #34495e;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.closed ~ .content {
+    margin-left: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60px;
+    }
+  
+    .sidebar.open {
+      width: 200px;
+    }
+  
+    .content {
+      margin-left: 60px;
+    }
+  
+    .sidebar.open ~ .content {
+      margin-left: 200px;
+    }
+    .dash{
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .item{
+        margin-top: 30px;
+        
+
+    }
+  }
+  
